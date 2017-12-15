@@ -1,0 +1,6 @@
+rootProject.name = 'wechat-utility'
+
+include 'wechat-utility-web'
+include 'wechat-utility-entities'
+
+

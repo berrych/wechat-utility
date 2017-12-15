@@ -1,0 +1,18 @@
+//微信通用平台公共接口Web模块构建配置
+version '1.0.0'
+
+dependencies {
+    compile project(':wechat-utility-entities')
+    compile (
+            "jstl:jstl:$jstlVersion",
+            "commons-net:commons-net:$commonsNetVersion",
+            "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion",
+            "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
+            "org.apache.httpcomponents:httpclient:$httpcomponentsClientVersion",
+            "org.springframework:spring-beans:$springVersion",
+            "org.springframework:spring-web:$springVersion",
+            "org.springframework:spring-webmvc:$springVersion"
+    )
+    providedCompile "javax.servlet:javax.servlet-api:$servletApiVersion"
+}
