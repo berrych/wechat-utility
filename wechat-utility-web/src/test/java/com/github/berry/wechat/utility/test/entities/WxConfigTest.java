@@ -1,6 +1,6 @@
 package com.github.berry.wechat.utility.test.entities;
 
-import com.wosbb.wechat.utility.entities.WxConfig;
+import com.github.berry.wechat.utility.entities.WxConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

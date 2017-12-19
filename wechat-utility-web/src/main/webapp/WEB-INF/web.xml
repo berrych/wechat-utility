@@ -56,22 +56,6 @@
         <url-pattern>/init</url-pattern>
     </servlet-mapping>
 
-    <!-- 公众号服务器验证初始化 -->
-    <!--<servlet>-->
-        <!--<servlet-name>verifyServlet</servlet-name>-->
-        <!--<servlet-class>com.wosbb.wechat.utility.web.servlet.VerifyServlet</servlet-class>-->
-        <!--<init-param>-->
-            <!--<param-name>token</param-name>-->
-            <!--<param-value>CdyDCLOUDsOfTwArE</param-value>-->
-        <!--</init-param>-->
-        <!--<load-on-startup>1</load-on-startup>-->
-    <!--</servlet>-->
-
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>verifyServlet</servlet-name>-->
-        <!--<url-pattern>/verify</url-pattern>-->
-    <!--</servlet-mapping>-->
-
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>

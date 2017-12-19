@@ -1,10 +1,10 @@
 package com.github.berry.wechat.utility.test.service;
 
-import com.wosbb.wechat.utility.kit.base.json.JacksonToolkit;
-import com.wosbb.wechat.utility.entities.MessageData;
-import com.wosbb.wechat.utility.entities.MessageValue;
-import com.wosbb.wechat.utility.service.standard.IWxPushService;
-import com.wosbb.wechat.utility.entities.TemplateMessage;
+import com.github.berry.kit.core.JsonKit;
+import com.github.berry.wechat.entities.meta.MessageData;
+import com.github.berry.wechat.entities.meta.MessageValue;
+import com.github.berry.wechat.entities.meta.TemplateMessage;
+import com.github.berry.wechat.utility.service.standard.IWxPushService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +27,10 @@ public class WxPusehServiceTest {
     @Test
     public void testPushTemplateMessage(){
         List<TemplateMessage> datas = new ArrayList<>();
-        MessageData healthData = new MessageData(new MessageValue("罗晓雪", "#173177"), new MessageValue("175cm", "#173177"), new MessageValue("84kg", "#173177"), new MessageValue("2016年8月8日 18:08", "#173177"), new MessageValue("感谢您的使用", "#173177"));
+        MessageData healthData = new MessageData(new MessageValue("张三", "#173177"), new MessageValue("175cm", "#173177"), new MessageValue("84kg", "#173177"), new MessageValue("2016年8月8日 18:08", "#173177"), new MessageValue("感谢您的使用", "#173177"));
         TemplateMessage templateMessage = new TemplateMessage("oj1ZNv3CwltGiAgp8Lkj6fhQWqCk", "Frc1lIod_XrfSBC6qdD5GipAiJHgLbN8t5KQP1-Wuz0", "http://wechat.wosbb.com/oauth/health", healthData);
         datas.add(templateMessage);
-        String data = new JacksonToolkit().writeAsString(datas);
+        String data = new JsonKit().write(datas);
 
         this.wxPushService.batchPushTemplateMessage(data);
     }
